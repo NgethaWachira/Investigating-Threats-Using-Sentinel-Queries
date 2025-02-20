@@ -50,12 +50,49 @@ To use Microsoft Sentinel for threat management and investigation, covering feat
   <img src="https://github.com/NgethaWachira/Investigating-Threats-Using-Sentinel-Queries/blob/46c600fe6b1fec54a1b1ead0767353e45015ff33/Images/Running%20the%20selected%20query.png" width="700" />
 </p>
 
-- Identify and select the results that are most relevant to your investigation, click on the checkboxes next to the results or events you want to bookmark, look for the Bookmark option often located at the top of the results page, click on Add to Bookmarks and provide some details, such as bookmark title and description. View your saved bookmarks, go to the Bookmarks section under Hunting.
+- Identify and select the results that are most relevant to your investigation, click on the checkboxes next to the results or events you want to bookmark, look for the Bookmark option often located at the top of the results page, click on Add to Bookmarks and provide some details, such as bookmark title and description. View your saved bookmarks, go to the Bookmarks section under Hunting. After saving bookmarks, you can always return to them to continue your investigation, e.g. opening a case, alerting other team members, or escalating the issue.
 
 <p align="center">
   <img src="https://github.com/NgethaWachira/Investigating-Threats-Using-Sentinel-Queries/blob/d36760423ba5be831b12512cfcf2338e2744d75a/Images/Adding%20bookmark%20from%20query%20results.PNG" width="300" />
   <img src="https://github.com/NgethaWachira/Investigating-Threats-Using-Sentinel-Queries/blob/d36760423ba5be831b12512cfcf2338e2744d75a/Images/Bookmarks%20displayed%20in%20the%20bookmark%20tab.PNG" width="300" />
 </p>
+
+- To use Livestream for Real-Time Data Monitoring in Microsoft Sentinel, go to the Hunting section to use pre-built queries or custom queries for monitoring, simply select an appropriate query for live monitoring. Look for the Livestream option by clicking on ellipsis and select Add to livestream, this will stream data as it comes in based on the query you’ve selected - it allows you to view live events, alerts, or trends as they occur in near real-time, to keep the data flowing, stay on the Livestream page. You can stop the Livestream or pause the query at any time to review or take further action.
+
+<p align="center">
+  <img src="https://github.com/NgethaWachira/Investigating-Threats-Using-Sentinel-Queries/blob/5ed1ac56274d0b8225c90ad1b35f1117a0b6f0c4/Images/Livestream%20a%20query.PNG" width="300" />
+  <img src="https://github.com/NgethaWachira/Investigating-Threats-Using-Sentinel-Queries/blob/5ed1ac56274d0b8225c90ad1b35f1117a0b6f0c4/Images/Livestream%20a%20query%202.PNG" width="300" />
+</p>
+
+- To retrieve archived log data in Microsoft Sentinel and perform KQL queries on it, we first log into the Azure portal, search for Microsoft Sentinel and select your Sentinel workspace. Under the General tab in the left-hand menu, find and click on Search blade which is where you can search for archived log data or logs that have been ingested over time. To restore or retrieve archived logs, you first need to select the correct table where the logs were previously stored, examples of this tables are SecurityEvent, AzureDiagnostics, CommonSecurityLog etc. 
+- Once you know which table you want to query, ensure that you select it in the search interface. If you want to restore data from specific periods, make sure to adjust the time range accordingly in the time filter at the top of the page
+
+<p align="center">
+  <img src="https://github.com/NgethaWachira/Investigating-Threats-Using-Sentinel-Queries/blob/fed59337c80184fb2dea535a1391c8611b159ce9/Images/Retrieving%20archived%20log%20data.PNG" width="700" />
+</p>
+
+- If the data was archived or purged, you may need to reingest it for querying. This can be done if the data is still available in the Azure Monitor Logs or another storage account linked with your Sentinel workspace. If the data was archived in another storage account, you may need to move or restore it back into your Sentinel workspace.
+
+<p align="center">
+  <img src="https://github.com/NgethaWachira/Investigating-Threats-Using-Sentinel-Queries/blob/66c4909b81d7eb69f0110132b1c5f0c47a0f7e57/Images/Restored%20signin%20logs.PNG" width="700" />
+</p>
+
+- After selecting the appropriate table and ensuring the logs are available for reingestion, you can perform KQL queries to analyze the data. Under the General tab in the left-hand menu, go to the Logs section, and use Kusto Query Language (KQL) to write queries and analyze the restored logs as shown in the image below. Once your query runs, review the results for patterns or anomalies. You can export the results to save the data for further analysis or reporting.
+
+<p align="center">
+  <img src="https://github.com/NgethaWachira/Investigating-Threats-Using-Sentinel-Queries/blob/70b2133b0c9eda30c8486270f641afa1585788ea/Images/Restored%20signin%20logs%20in%20KQL.PNG" width="700" />
+</p>
+
+- To perform quick searches in Microsoft Sentinel without using the Hunting feature. In your Sentinel workspace, under the General section in the left-hand menu, click on Search, Search blade allows you to quickly search from the search bar at the top for specific keywords, logs, or data across the various tables in your Sentinel workspace. Press Enter to perform the search, the results will appear below the search bar showing you the data entries that match your search criteria. You can export the search results in CSV format for further analysis or reporting.
+
+<p align="center">
+  <img src="https://github.com/NgethaWachira/Investigating-Threats-Using-Sentinel-Queries/blob/e1ccf39f591386cad36d7efeb7f91be0734dc439/Images/Managing%20searches%20with%20keywords.PNG" width="700" />
+</p>
+
+
+
+
+
 
 
 
