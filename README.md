@@ -65,7 +65,7 @@ To use Microsoft Sentinel for threat management and investigation, covering feat
 </p>
 
 - To retrieve archived log data in Microsoft Sentinel and perform KQL queries on it, we first log into the Azure portal, search for Microsoft Sentinel and select your Sentinel workspace. Under the General tab in the left-hand menu, find and click on Search blade which is where you can search for archived log data or logs that have been ingested over time. To restore or retrieve archived logs, you first need to select the correct table where the logs were previously stored, examples of this tables are SecurityEvent, AzureDiagnostics, CommonSecurityLog etc. 
-- Once you know which table you want to query, ensure that you select it in the search interface. If you want to restore data from specific periods, make sure to adjust the time range accordingly in the time filter at the top of the page
+- Once you know which table you want to query, ensure that you select it in the search interface. If you want to restore data from specific periods, make sure to adjust the time range accordingly in the time filter at the top of the page.
 
 <p align="center">
   <img src="https://github.com/NgethaWachira/Investigating-Threats-Using-Sentinel-Queries/blob/fed59337c80184fb2dea535a1391c8611b159ce9/Images/Retrieving%20archived%20log%20data.PNG" width="700" />
@@ -89,15 +89,24 @@ To use Microsoft Sentinel for threat management and investigation, covering feat
   <img src="https://github.com/NgethaWachira/Investigating-Threats-Using-Sentinel-Queries/blob/e1ccf39f591386cad36d7efeb7f91be0734dc439/Images/Managing%20searches%20with%20keywords.PNG" width="700" />
 </p>
 
+- To work with Workbooks in Microsoft Sentinel ensure you have the necessary permissions. You need to have at least Workbook Reader or Workbook Contributor permissions on the resource group in the central workspace where you're working with Sentinel. In the Sentinel workspace, Under Threat Management, click on Workbooks. This is where you can access existing workbooks or create new ones. On the left-hand menu, go to the Content management section and click Content Hub - it provides a collection of pre-built templates and workbooks that you can use to visualize your data and metrics. 
 
+<p align="center">
+  <img src="https://github.com/NgethaWachira/Investigating-Threats-Using-Sentinel-Queries/blob/232c7b71b4ace34fa4011de3c65f9e24e6935387/Images/Content%20hub%20workbook%20data%20sources.PNG" width="700" />
+</p>
 
+- Inside the Content Hub, look for `Azure Activity` - this template is designed to help you visualize and analyze data related to Azure activity logs such as sign-ins, resource usage, and access. Click on Azure Activity and view template to open the template options, after selecting the template, you'll need to save the workbook to your workspace.
 
+<p align="center">
+  <img src="https://github.com/NgethaWachira/Investigating-Threats-Using-Sentinel-Queries/blob/ce2130368dc48d05e97f16cc5d21b173c31c33a1/Images/Workbooks%20in%20sentinel.PNG" width="300" />
+  <img src="https://github.com/NgethaWachira/Investigating-Threats-Using-Sentinel-Queries/blob/ce2130368dc48d05e97f16cc5d21b173c31c33a1/Images/Viewing%20saved%20workbook.PNG" width="300" />
+</p>
 
+- In the Workbooks section, click on the saved Azure Activity workbook to open it, you’ll now be able to see pre-built visualizations of Azure activity data, we can now view graphs, tables, and charts showing various activities, such as resource usage, sign-ins, and other logs. You can make your customizations by clicking on any individual visualization e.g., a graph or table and modify the settings or data queries, you can also add new visualizations using KQL queries that suit your investigation needs. After customizing the workbook as needed, click Save to keep your changes.
 
+<p align="center">
+  <img src="https://github.com/NgethaWachira/Investigating-Threats-Using-Sentinel-Queries/blob/523b8e2e0c4e2db94c61c01344185f2f5395ec08/Images/Viewing%20saved%20workbook%202.PNG" width="700" />
+</p>
 
-
-
-
-
-
+- By modifying these templates, you can tailor the workbook to visualize data that fits your needs and provides deeper insights into your environment.
 
